@@ -1,0 +1,95 @@
+import express from 'express';
+import ping from './ping';
+import auth from './auth';
+import profile from './profile';
+import categories from './categories';
+import products from './products';
+import packages from './packages';
+import leads from './leads';
+import stocks from './stocks';
+import userActivities from './userActivities';
+import users from './users';
+import designations from './designations';
+import regions from './regions';
+import units from './units';
+import targets from './targets';
+import hierarchies from './hierarchies';
+import userManagement from './userManagement';
+import vendorPrice from './vendorPrice';
+import attendance from './attendance';
+import userTracking from './userLiveTracking';
+import leadActivities from './lead-activities';
+import roles from './roles';
+import mobileDashboard from './mobileDashboard';
+import appUpdate from './appUpdate';
+import notification from './notifications';
+import sync from './sync';
+import history from './history';
+import inventoryManagement from './inventoryManagement';
+import featureApproval from './featureApproval';
+import discount from './discount';
+import count from './sidebarCount';
+import route from './routes';
+import invoice from './invoices';
+import images from './images';
+import companies from './companies';
+import meeting from './meeting';
+import terretoryMaster from './terretoryMaster';
+import miscresoureentries from './miscResoureEntries';
+import getConfig from './getConfig';
+import randomImage from './randomImage';
+import tax from './tax';
+import salescollection from './salesColletion';
+
+
+// Add your newly create component routes here with route prefix.
+const router = express.Router();
+
+router.use('/ping', ping);
+router.use('/profile', profile);
+router.use('/auth', auth);
+router.use('/categories', categories);
+router.use('/products', products);
+router.use('/packages', packages);
+router.use('/leads', leads);
+router.use('/stocks', stocks);
+router.use('/userActivities', userActivities);
+router.use('/users', users);
+router.use('/designations', designations);
+router.use('/regions', regions);
+router.use('/units', units);
+router.use('/hierarchies', hierarchies);
+router.use('/targets', targets);
+router.use('/userManagement', userManagement);
+router.use('/price-list', vendorPrice);
+router.use('/attendance', attendance);
+router.use('/userTracking', userTracking);
+router.use('/lead-activities', leadActivities);
+router.use('/roles', roles);
+router.use('/dashboard', mobileDashboard);
+router.use('/appUpdate', appUpdate);
+router.use('/notification', notification);
+router.use('/history', history);
+router.use('/sync', sync);
+router.use('/inventory', inventoryManagement);
+router.use('/featureApproval', featureApproval);
+router.use('/discounts', discount);
+router.use('/count', count);
+router.use('/routes', route);
+router.use('/invoices', invoice);
+router.use('/images', images);
+router.use('/companies', companies);
+router.use('/meeting', meeting);
+router.use('/territorymaster', terretoryMaster);
+router.use('/miscresoureentries', miscresoureentries);
+router.use('/getConfig', getConfig);
+router.use('/randomImage', randomImage);
+router.use('/tax', tax);
+router.use('/salescollection', salescollection);
+
+/* Make sure while changing below parentrouter.
+This is top level router created to enhance in future like versioning, route prefix etc. */
+const parentRouter = express.Router();
+parentRouter.use('/api', router);
+
+export default parentRouter;

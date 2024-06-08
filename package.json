@@ -1,0 +1,58 @@
+{
+  "name": "psm-api",
+  "version": "1.0.0",
+  "description": "Main backend repository for psm product",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --es-module-specifier-resolution=node server.js --name meghani",
+    "pm2-start": "pm2 start server.js --name psm-admin",
+    "lint": "eslint --ext .js .; exit 0",
+    "lint:fix": "eslint --ext .js .  --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-milan-nstack:nstacksoftech/psm-api.git"
+  },
+  "engines": {
+    "node": "18.15.0",
+    "npm": "9.5.0"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.1",
+    "@sentry/node": "^7.109.0",
+    "@sentry/profiling-node": "^7.109.0",
+    "aws-sdk": "^2.1608.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mariadb": "^3.0.2",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.2",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.9",
+    "otp-generator": "^4.0.1",
+    "twilio": "^4.19.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.3"
+  }
+}
