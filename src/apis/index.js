@@ -41,7 +41,6 @@ import randomImage from './randomImage';
 import tax from './tax';
 import salescollection from './salesColletion';
 
-
 // Add your newly create component routes here with route prefix.
 const router = express.Router();
 
